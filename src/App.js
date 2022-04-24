@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import {ReactReduxContext} from 'react-redux';
 
 function App() {
+  const storeContext=useContext(ReactReduxContext);
+  console.log(storeContext);
   return (
     <div className="App">
       <header className="App-header">
